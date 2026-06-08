@@ -1,33 +1,108 @@
-<!DOCTYPE html> <!-- This tells the browser that the file is written in HTML5 -->
+<!DOCTYPE html>
 <html>
-  <head>
-    
-    <!-- Determines what shows up on the tab -->
-    <title>Hello, I'm Justin Toh. </title> 
-    
-  </head>
-  
-  <body>
-    
-    <!-- h1 is heading 1, title of the page is here -->
-    <h1>Volcano plots</h1> 
-    <!--p is paragraph, Write the content in this page -->
-    <p>This is my reanalysis of the 2017 transcriptomic and proteomic data from 2017</p> 
 
-    <!-- img displays the image, src is source tells where to find image, width controls the size in pixels -->
-    <img src="images/volcano_plot_MF_vs_PF_2017.png" width="600"> 
+<head>
+  <title>Justin Toh, Ph.D.</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    <p>
-      <!-- a = anchor that creates links, href = where it goes when clicked, > < in between is what user clicks -->
-      <a href="scripts/Volcano_plot_Christiano_2017.R">View R Script</a> 
-    </p>
+    body { font-family: Arial, sans-serif; color: #333; }
 
-    <p>
-      <!-- clickable link to your CV -->
-      <a href="files/Justin_Toh_CV.pdf">View My CV</a> 
-    </p>
+    nav {
+      background-color: #4a5568;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .name { color: white; font-weight: bold; font-size: 18px; }
+    nav a { color: white; text-decoration: none; margin-left: 25px; font-size: 15px; }
+    nav a:hover { text-decoration: underline; }
 
+    .hero {
+      padding: 80px 120px;
+      border-bottom: 1px solid #eee;
+    }
+    .hero h1 { font-size: 42px; margin-bottom: 10px; }
+    .hero .subtitle { color: #666; font-size: 18px; margin-bottom: 30px; }
 
-    
-  </body>
+    .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      border: 1px solid #ccc;
+      padding: 8px 16px;
+      text-decoration: none;
+      color: #333;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    .btn:hover { background-color: #f0f0f0; }
+
+    section { padding: 60px 120px; border-bottom: 1px solid #eee; }
+    section h2 { font-size: 28px; margin-bottom: 20px; color: #2d3748; }
+    section p { line-height: 1.8; margin-bottom: 15px; color: #555; max-width: 750px; }
+
+    .project {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      margin-top: 20px;
+      margin-bottom: 50px;
+    }
+    .project img { width: 450px; border-radius: 6px; border: 1px solid #ddd; }
+    .project .description h3 { font-size: 20px; margin-bottom: 12px; }
+    .project .description p { margin-bottom: 10px; }
+
+    .contact a { color: #4a5568; }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <span class="name">Justin Toh</span>
+    <div>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <h1>Justin Toh, Ph.D.</h1>
+    <p class="subtitle">Postdoctoral Scientist · Microbial Pathogenesis · Protein Engineering</p>
+    <div class="buttons">
+      <a class="btn" href="mailto:justin.yl.toh@gmail.com">✉ Email</a>
+      <a class="btn" href="https://github.com/justinyltoh-byte">⌥ GitHub</a>
+      <a class="btn" href="files/Justin_Toh_CV.pdf">📄 CV</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a postdoctoral scientist with a Ph.D. in Microbial Pathogenesis from Yale University. My research spans protein engineering, RNA biology, and parasite biology — from directed evolution of antibody mimetics to transcriptomic analysis of infectious parasites.</p>
+    <p>I am passionate about using computational and molecular tools to answer fundamental biological questions. This site documents my ongoing reanalysis of published datasets and the scripts I use to generate figures.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>Reanalyses of published datasets with documented scripts and figures.</p>
+
+    <div class="project">
+      <img src="images/volcano_plot_MF_vs_PF_2017.png" alt="Volcano plot MF vs PF">
+      <div class="description">
+        <h3>Volcano Plot — MF vs PF (Christiano 2017)</h3>
+        <p>Reanalysis of transcriptomic and proteomic data comparing metacyclic forms (MF) and procyclic forms (PF) of <em>Trypanosoma brucei</em>.</p>
+        <p>914 genes upregulated in MF, 622 downregulated at the thresholds applied.</p>
+        <a class="btn" href="scripts/Volcano_plot_Christiano_2017.R">View R Script</a>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Feel free to reach out at <a href="mailto:justin.yl.toh@gmail.com">justin.yl.toh@gmail.com</a></p>
+  </section>
+
+</body>
 </html>
