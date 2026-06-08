@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Justin Toh, Ph.D.</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body { font-family: Arial, sans-serif; color: #333; }
-
     nav {
       background-color: #4a5568;
       padding: 15px 40px;
@@ -18,14 +15,12 @@
     nav .name { color: white; font-weight: bold; font-size: 18px; }
     nav a { color: white; text-decoration: none; margin-left: 25px; font-size: 15px; }
     nav a:hover { text-decoration: underline; }
-
     .hero {
       padding: 80px 120px;
       border-bottom: 1px solid #eee;
     }
     .hero h1 { font-size: 42px; margin-bottom: 10px; }
     .hero .subtitle { color: #666; font-size: 18px; margin-bottom: 30px; }
-
     .buttons { display: flex; gap: 12px; flex-wrap: wrap; }
     .btn {
       border: 1px solid #ccc;
@@ -36,11 +31,10 @@
       font-size: 14px;
     }
     .btn:hover { background-color: #f0f0f0; }
-
     section { padding: 60px 120px; border-bottom: 1px solid #eee; }
     section h2 { font-size: 28px; margin-bottom: 20px; color: #2d3748; }
-    section p { line-height: 1.8; margin-bottom: 15px; color: #555; max-width: 750px; }
-
+    section h3 { font-size: 20px; margin-bottom: 15px; color: #2d3748; }
+    section p { line-height: 1.8; margin-bottom: 15px; color: #555; max-width: 750px; text-align: justify; }
     .project {
       display: flex;
       gap: 40px;
@@ -51,13 +45,10 @@
     .project img { width: 450px; border-radius: 6px; border: 1px solid #ddd; }
     .project .description h3 { font-size: 20px; margin-bottom: 12px; }
     .project .description p { margin-bottom: 10px; }
-
     .contact a { color: #4a5568; }
   </style>
 </head>
-
 <body>
-
   <nav>
     <span class="name">Justin Toh</span>
     <div>
@@ -83,28 +74,30 @@
     <p>While my molecular biology foundation is strong, my computational skills had not kept pace with my experimental work. Rather than let that gap widen, I decided to address it head-on by building this site as a living record of my growth in bioinformatics. Therefore, I will be posting figures and annotated R scripts on a rolling basis: covering volcano plots, UpSet graphs, PhIP-seq analysis, scRNA analysis, and more!</p>
   </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+  <section id="projects">
+    <h2>Projects</h2>
 
-  <h3>Volcano Plots</h3>
-  <p><em>Visualizing multi-omic datasets to identify functional patterns and prioritize candidate genes for further investigation.</em></p>
+    <h3>Volcano Plots</h3>
 
-  <!-- Two volcano plots side by side -->
-  <div style="display: flex; gap: 20px; margin-top: 20px;">
-    <img src="images/volcano_plot_MF_vs_PF_2017.png" alt="Transcriptomics volcano plot" style="width: 45%;">
-    <img src="images/volcano_plot_MF_vs_PF_2017.png" alt="Proteomics volcano plot" style="width: 45%;">
-  </div>
+    <p><em>Visualizing multi-omic datasets to identify functional patterns and prioritize candidate genes for further investigation.</em></p>
 
-  <!-- Caption -->
-  <p style="margin-top: 15px;">This plot compares transcriptomic (left) and proteomic (right) readouts of noninfectious (procyclic) and pathogenic (metacyclic) parasites. Thresholds: |log₂FC| > 1, adjusted p-value < 0.05. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5607103/" target="_blank">Source files</a>. While useful for visually representing data in presentations, this figure alone may lack resolution without additional context.</p>
+    <!-- Two volcano plots side by side -->
+    <div style="display: flex; gap: 20px; margin-top: 20px;">
+      <img src="images/volcano_plot_MF_vs_PF_2017.png" alt="Transcriptomics volcano plot" style="width: 45%;">
+      <img src="images/volcano_plot_MF_vs_PF_2017.png" alt="Proteomics volcano plot" style="width: 45%;">
+    </div>
 
-  <!-- R Script buttons -->
-  <div style="display: flex; gap: 12px; margin-top: 15px;">
-    <a class="btn" href="scripts/Volcano_plot_Christiano_2017.R">View R Script (Left)</a>
-    <a class="btn" href="scripts/Volcano_plot_Christiano_2017.R">View R Script (Right)</a>
-  </div>
+    <!-- Caption -->
+    <p style="margin-top: 15px;">This plot compares transcriptomic (left) and proteomic (right) readouts of noninfectious (procyclic) and pathogenic (metacyclic) parasites. Thresholds: |log₂FC| > 1, adjusted p-value < 0.05. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5607103/" target="_blank">Source files</a>.</p>
 
-</section>
+    <p>While useful for visually representing data in presentations, this figure alone may lack resolution without additional context.</p>
+
+    <!-- R Script buttons -->
+    <div style="display: flex; gap: 12px; margin-top: 15px;">
+      <a class="btn" href="scripts/Volcano_plot_Christiano_2017.R">View R Script (Left)</a>
+      <a class="btn" href="scripts/Volcano_plot_Christiano_2017.R">View R Script (Right)</a>
+    </div>
+  </section>
 
   <section id="contact" class="contact">
     <h2>Contact</h2>
