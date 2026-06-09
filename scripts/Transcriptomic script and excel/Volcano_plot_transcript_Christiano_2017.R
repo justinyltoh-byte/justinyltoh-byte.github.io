@@ -62,3 +62,5 @@ ggplot(df, aes(x = `Log2 FC MF/PF`, y = `-Log10(P-Value)`, color = significance)
 ggsave("volcano_plot_transcript_MF_vs_PF_2017.png", width = 8, height = 6, dpi = 300)
 ggsave("volcano_plot_transcript_MF_vs_PF_2017.svg", width = 8, height = 6)
 
+#Saving new excel table for future use
+write.csv(df, "Data_Wrangled_Transcriptomics_2017.csv", row.names = FALSE)
